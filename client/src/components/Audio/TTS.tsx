@@ -83,7 +83,7 @@ export function BrowserTTS({
         preload="none"
         controlsList="nodownload nofullscreen noremoteplayback"
         className="hidden"
-        src={audioRef.current?.src}
+        src={audioRef.current?.src || undefined}
         onError={(error) => {
           logger.error('Error fetching audio:', error);
         }}
@@ -175,7 +175,7 @@ export function ExternalTTS({
         preload="none"
         controlsList="nodownload nofullscreen noremoteplayback"
         className="hidden"
-        src={audioRef.current?.src}
+        src={audioRef.current?.src || undefined}
         onError={(error) => {
           logger.error('Error fetching audio:', error);
         }}
